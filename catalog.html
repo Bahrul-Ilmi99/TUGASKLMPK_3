@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Produk Pemasaran Tahu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        header p {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .product-card h3 {
+            font-size: 24px;
+            color: #4CAF50;
+            margin: 10px 0;
+        }
+        .product-card p {
+            font-size: 16px;
+            color: #666;
+            margin: 10px 0;
+        }
+        .product-card .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        footer p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Katalog Produk Pemasaran Tahu</h1>
+    <p>Varian Tahu Berkualitas untuk Kebutuhan Sehari-hari</p>
+</header>
+
+<div class="container">
+    <!-- Grid of Products -->
+    <div class="product-grid">
+    -- Tahu Klasik --
+        <div class="product-card">
+            <img src="" alt="Tahu Klasik">
+            <h3>Tahu Klasik</h3>
+            <p>Tahu putih klasik, lembut di dalam dan renyah di luar. Terbuat dari kedelai pilihan untuk memberikan rasa yang lezat.</p>
+            <p class="price">Rp 5.000 - Rp 20.000</p>
+        </div>
+
+    -- Tahu Tempe --
+        <div class="product-card">
+            <img src="https://via.placeholder.com/400x250" alt="Tahu Tempe">
+            <h3>Tahu Tempe</h3>
+            <p>Kombinasi antara tahu dan tempe, memberikan rasa gurih dan kaya protein.</p>
+            <p class="price">Rp 7.500 - Rp 14.000</p>
+        </div>
+
+        <!-- Tahu Isi -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/400x250" alt="Tahu Isi">
+            <h3>Tahu Isi</h3>
+            <p>Tahu dengan isian sayuran, daging cincang, atau seafood, cocok untuk camilan praktis.</p>
+            <p class="price">Rp 12.000 - Rp 22.000</p>
+        </div>
+    </div>
+
+    <!-- Grid of More Products -->
+    <div class="product-grid">
+        <!-- Tahu Sumedang -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/400x250" alt="Tahu Sumedang">
+            <h3>Tahu Sumedang</h3>
+            <p>Tahu khas Sumedang, renyah di luar dan lembut di dalam.</p>
+            <p class="price">Rp 15.000 - Rp 35.000</p>
+        </div>
+
+        <!-- Tahu Susu -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/400x250" alt="Tahu Susu">
+            <h3>Tahu Susu</h3>
+            <p>Tahu dengan tambahan susu kedelai, menghasilkan rasa creamy dan lembut.</p>
+            <p class="price">Rp 10.000 - Rp 25.000</p>
+        </div>
+
+        <!-- Tahu Goreng Krispi -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/400x250" alt="Tahu Goreng Krispi">
+            <h3>Tahu Goreng Krispi</h3>
+            <p>Tahu goreng dengan lapisan tepung renyah yang gurih, siap dimakan kapan saja.</p>
+            <p class="price">Rp 7.000 - Rp 15.000</p>
+        </div>
+    </div>
+
+    <!-- Grid of More Products -->
+    <div class="product-grid">
+        <!-- Tahu Bacem -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/400x250" alt="Tahu Bacem">
+            <h3>Tahu Bacem</h3>
+            <p>Tahu yang dimasak dengan bumbu manis dan rempah khas, cocok untuk nasi rames atau lauk pendamping.</p>
+            <p class="price">Rp 10.000</p>
+        </div>
+
+        <!-- Tahu Lontong -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/400x250" alt="Tahu Lontong">
+            <h3>Tahu Lontong</h3>
+            <p>Kombinasi tahu dengan lontong, disajikan dengan bumbu kacang yang gurih.</p>
+            <p class="price">Rp 20.000</p>
+        </div>
+
+        <!-- Tahu Pedas -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/400x250" alt="Tahu Pedas">
+            <h3>Tahu Pedas</h3>
+            <p>Tahu goreng dengan bumbu pedas manis, cocok bagi pecinta makanan pedas.</p>
+            <p class="price">Rp 8.000 - Rp 18.000</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>Kontak Kami:+62 812 3456 7890</p>
+    <p></p>
+</footer>
+
+</body>
+</html>
