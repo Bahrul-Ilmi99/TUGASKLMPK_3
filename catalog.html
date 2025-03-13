@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Produk Pemasaran Tahu</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+
+<header>
+    <h1>PEMASARAN TAHU
+    </h1>
+    <p>😁Berbagai macam varian tahu😁 </p>
+</header>
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="../GAMBAR/diskon 2.png"Slide 1">
+        </div>
+        <div class="swiper-slide">
+            <img src="../GAMBAR/m.jpg" alt="Slide 2">
+        </div>
+        <div class="swiper-slide">
+            <img src="../GAMBAR/p.jpg" alt="Slide 3">
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+<div class="container">
+    <!-- Grid of Products -->
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="../gambar/tahu klasic.jpg" alt="Tahu Klasik">
+            <h3>Tahu Klasik</h3>
+            <p>Tahu putih klasik, lembut di dalam dan renyah di luar. Terbuat dari kedelai pilihan untuk memberikan rasa yang lezat.</p>
+            <p class="price">Rp 5.000 - Rp 20.000</p>
+        </div>
+
+        <!-- Tahu Tempe -->
+        <div class="product-card">
+            <img src="../gambar/tahu goreng.jpg" alt="Tahu Tempe">
+            <h3>Tahu goreng</h3>
+            <p>tahu putih yang digoreng memberikan rasa gurih dan kaya protein.</p>
+            <p class="price">Rp 7.500 - Rp 14.000</p>
+        </div>
+
+        <!-- Tahu Isi -->
+        <div class="product-card">
+            <img src="../gambar/tahu isi.jpg" alt="Tahu Isi">
+            <h3>Tahu Isi</h3>
+            <p>Tahu dengan isian sayuran, daging cincang, atau seafood, cocok untuk camilan praktis.</p>
+            <p class="price">Rp 12.000 - Rp 22.000</p>
+        </div>
+
+        <!-- Tahu Sumedang -->
+        <div class="product-card">
+            <img src="../gambar/tahu sumedang.jpg" alt="Tahu Sumedang">
+            <h3>Tahu Sumedang</h3>
+            <p>Tahu khas Sumedang, renyah di luar dan lembut di dalam.</p>
+            <p class="price">Rp 15.000 - Rp 35.000</p>
+        </div>
+
+        <!-- Tahu Susu -->
+        <div class="product-card">
+            <img src="../gambar/tahu susu.jpg" alt="Tahu Susu">
+            <h3>Tahu Susu</h3>
+            <p>Tahu dengan tambahan susu kedelai, menghasilkan rasa creamy dan lembut.</p>
+            <p class="price">Rp 10.000 - Rp 25.000</p>
+        </div>
+
+        <!-- Tahu Goreng Krispi -->
+        <div class="product-card">
+            <img src="../gambar/tahu goreng krispiy.jpg" alt="Tahu Goreng Krispi">
+            <h3>Tahu Goreng Krispi</h3>
+            <p>Tahu goreng dengan lapisan tepung renyah yang gurih, siap dimakan kapan saja.</p>
+            <p class="price">Rp 7.000 - Rp 15.000</p>
+        </div>
+
+        <!-- Tahu Bacem -->
+        <div class="product-card">
+            <img src="../gambar/tahu bacem.jpg" alt="Tahu Bacem">
+            <h3>Tahu Bacem</h3>
+            <p>Tahu yang dimasak dengan bumbu manis dan rempah khas, cocok untuk nasi rames atau lauk pendamping.</p>
+            <p class="price">Rp 10.000</p>
+        </div>
+
+        <!-- Tahu Lontong -->
+        <div class="product-card">
+            <img src="../gambar/tahu lontong.jpg" alt="Tahu Lontong">
+            <h3>Tahu Lontong</h3>
+            <p>Kombinasi tahu dengan lontong, disajikan dengan bumbu kacang yang gurih.</p>
+            <p class="price">Rp 20.000</p>
+        </div>
+
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>Kontak Kami: +62 812 3456 7890</p>
+        <P>alamat: DWI JAYA, SUBARDAN, JL. SUMARGO GG.ARJUNO NO.71, KOTA MALANG, JAWA TIMUR, 65146
+    </p>
+</footer>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+            delay: 3000, // Otomatis ganti slide setiap 3 detik
+        },
+    });
+</script>
+
+
+</body>
+</html>
