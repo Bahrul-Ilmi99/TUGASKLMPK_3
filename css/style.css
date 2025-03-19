@@ -1,96 +1,114 @@
-/* Reset default margin dan padding */
-body, html {
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    height: 100%;
-    font-family: Arial, sans-serif;
 }
-
-/* Background hijau dengan gambar */
-.background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #4CAF50; /* Warna hijau */
-    background-image: url('../gambar/beground\ tahu2.png'); /* Ganti dengan path gambar Anda */
-    background-size: cover; /* Gambar menutupi seluruh area */
-    background-position: center; /* Posisi gambar di tengah */
-    z-index: -1; /* Background di belakang konten */
-}
-
-/* Container untuk form login */
-.login-container {
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.9); /* Latar belakang putih dengan transparansi */
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    width: 320px;
-    margin: 0 auto; /* Pusatkan container */
-    top: 50%;
-    transform: translateY(-50%); /* Vertikal center */
-}
-
-.login-container h2 {
-    margin-bottom: 20px;
-    color: #333;
-    font-size: 24px;
-}
-
-/* Container untuk input group */
-.input-group {
-    margin-bottom: 20px;
-    text-align: left; /* Teks label rata kiri */
-}
-
-/* Style untuk label */
-.input-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 14px;
-    color: #555;
-}
-
-/* Style untuk input fields */
-.input-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-    box-sizing: border-box; /* Agar padding tidak mempengaruhi lebar */
-    outline: none; /* Menghilangkan outline default */
-}
-
-.input-group input:focus {
-    border-color: #4CAF50; /* Warna border saat input aktif */
-    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Efek shadow saat input aktif */
-}
-
-/* Style untuk tombol login */
-.login-container button {
-    width: 100%;
-    padding: 12px;
+header {
     background-color: #4CAF50;
     color: white;
-    border: none;
-    border-radius: 5px;
+    text-align: center;
+    padding: 20px 0;
+}
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+header p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+.swiper-container {
+    width: 100%;
+    height: 500px; /* Tinggi slider diperbesar */
+    margin: 20px 0;
+}
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.product-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 40px);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.product-card h3 {
+    font-size: 24px;
+    color: #4CAF50;
+    margin: 10px 0;
+}
+.product-card p {
     font-size: 16px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s ease; /* Efek transisi saat hover */
+    color: #666;
+    margin: 10px 0;
 }
-
-.login-container button:hover {
-    background-color: #45a049; /* Warna lebih gelap saat hover */
+.product-card .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
 }
-
-/* Atur ukuran gambar tahu */
-.tahu-image {
-    width: 150px; /* Lebar gambar */
-    height: auto; /* Tinggi disesuaikan secara proporsional */
-    margin-bottom: 20px;
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+footer p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+@media (max-width: 768px) {
+    .product-card {
+        width: calc(50% - 20px);
+    }
+    .swiper-container {
+        height: 300px; /* Tinggi slider di mobile */
+    }
+}
+@media (max-width: 480px) {
+    .product-card {
+        width: 100%;
+    }
+    .swiper-container {
+        height: 250px; /* Tinggi slider di mobile kecil */
+    }
 }
