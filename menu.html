@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemasaran Tahu</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            background: linear-gradient(to right, #e8f5e9, #c8e6c9);
+        }
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background: #2e7d32;
+            color: white;
+            padding: 20px;
+            position: fixed;
+        }
+        .sidebar h2 {
+            text-align: center;
+            color: #a5d6a7;
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            margin: 8px 0;
+            background: #388e3c;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .sidebar a:hover {
+            background: #66bb6a;
+            color: white;
+            transform: scale(1.05);
+        }
+        /* Konten utama */
+        .content {
+            margin-left: 270px;
+            padding: 20px;
+            flex: 1;
+        }
+        .header {
+            background: #2e7d32;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .description {
+            margin-top: 20px;
+            padding: 20px;
+            background: linear-gradient(to right, #e8f5e9, #a5d6a7);
+            border-radius: 10px;
+            box-shadow: 3px 3px 15px rgba(0,0,0,0.2);
+            font-size: 18px;
+            line-height: 1.6;
+            color: #1b5e20;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .description img {
+            width: 150px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        .text-content {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Pemasaran Tahu</h2>
+        <a href="menu.html">🏠 Home</a>
+        <a href="laporan.html">📊 Laporan</a>
+        <a href="stok_produk.html">📦 Stok Produk</a>
+        <a href="transaksi.html">🛒 Transaksi</a>
+        <a href="pengiriman.html">🚚 Pengiriman</a>
+        <a href="pengaturan.html">⚙ Pengaturan</a>
+    </div>
+
+    <!-- Konten utama -->
+    <div class="content">
+        <div class="header">Selamat Datang di Pemasaran Tahu - Tahu Segar & Berkualitas</div>
+        <div class="description">
+            <img src="gambar/gambar_tahu.jpg" alt="Tahu Berkualitas">
+            <div class="text-content">
+                <p><strong>Pemasaran Tahu</strong> solusi terbaik bagi Anda yang mencari tahu berkualitas tinggi. Kami menyediakan tahu segar yang diproduksi dengan bahan-bahan terbaik dan proses higienis untuk memastikan cita rasa yang lezat dan sehat.</p>
+                <p>Kami berkomitmen untuk memberikan produk berkualitas kepada pelanggan dengan harga yang terjangkau. Dengan sistem distribusi yang efisien, kami memastikan bahwa produk kami selalu tersedia dan dapat diakses dengan mudah.</p>
+                <p>Jelajahi berbagai pilihan tahu kami dan nikmati kualitas terbaik untuk usaha kuliner atau konsumsi pribadi Anda!</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

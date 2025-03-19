@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan - Pemasaran Tahu</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            background: linear-gradient(to right, #e8f5e9, #c8e6c9);
+        }
+
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background: #2e7d32;
+            color: white;
+            padding: 20px;
+            position: fixed;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            color: #a5d6a7;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            margin: 8px 0;
+            background: #388e3c;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.2s;
+            cursor: pointer;
+        }
+
+        .sidebar a:hover {
+            background: #66bb6a;
+            transform: scale(1.05);
+        }
+
+        .content {
+            margin-left: 270px;
+            padding: 20px;
+            flex: 1;
+        }
+
+        .header {
+            background: #2e7d32;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .report-container {
+            margin-top: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .report-container h3 {
+            color: #1b5e20;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        th {
+            background: #2e7d32;
+            color: white;
+        }
+
+        .btn {
+            background: #388e3c;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 2px;
+        }
+
+        .btn:hover {
+            background: #66bb6a;
+        }
+
+        .form-container {
+            margin-bottom: 20px;
+        }
+
+        .form-container input {
+            padding: 5px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Pemasaran Tahu</h2>
+        <a href="menu.html">🏠 Home</a>
+        <a href="laporan.html">📊 Laporan</a>
+        <a href="stok_produk.html">📦 Stok Produk</a>
+        <a href="transaksi.html">🛒 Transaksi</a>
+        <a href="pengiriman.html">🚚 Pengiriman</a>
+        <a href="pengaturan.html">⚙ Pengaturan</a>
+    </div>
+
+    <!-- Konten utama -->
+    <div class="content">
+        <div class="header">Laporan Penjualan Tahu</div>
+        <div class="report-container">
+            <div class="form-container">
+                <input type="text" id="tanggal" placeholder="Tanggal">
+                <input type="text" id="pelanggan" placeholder="Pelanggan">
+                <input type="text" id="produk" placeholder="Produk">
+                <input type="number" id="jumlah" placeholder="Jumlah">
+                <input type="text" id="total" placeholder="Total">
+                <button class="btn" onclick="tambahData()">Tambah</button>
+            </div>
+            <table id="tabelLaporan">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Tanggal</th>
+                        <th>Pelanggan</th>
+                        <th>Produk</th>
+                        <th>Jumlah</th>
+                        <th>Total</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data dinamis -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        let dataLaporan = [
+            { tanggal: '18 Maret 2025', pelanggan: 'Budi Santoso', produk: 'Tahu Putih', jumlah: 10, total: 'Rp20.000' },
+            { tanggal: '17 Maret 2025', pelanggan: 'Ani Lestari', produk: 'Tahu Kuning', jumlah: 15, total: 'Rp30.000' }
+        ];
+
+        function renderTable() {
+            const tbody = document.querySelector("#tabelLaporan tbody");
+            tbody.innerHTML = "";
+            dataLaporan.forEach((item, index) => {
+                tbody.innerHTML += `
+                    <tr>
+                        <td>${index + 1}</td>
+                        <td>${item.tanggal}</td>
+                        <td>${item.pelanggan}</td>
+                        <td>${item.produk}</td>
+                        <td>${item.jumlah}</td>
+                        <td>${item.total}</td>
+                        <td>
+                            <button class="btn" onclick="editData(${index})">Edit</button>
+                            <button class="btn" onclick="hapusData(${index})">Hapus</button>
+                        </td>
+                    </tr>
+                `;
+            });
+        }
+
+        function tambahData() {
+            const tanggal = document.getElementById('tanggal').value;
+            const pelanggan = document.getElementById('pelanggan').value;
+            const produk = document.getElementById('produk').value;
+            const jumlah = document.getElementById('jumlah').value;
+            const total = document.getElementById('total').value;
+
+            if (tanggal && pelanggan && produk && jumlah && total) {
+                dataLaporan.push({ tanggal, pelanggan, produk, jumlah, total });
+                renderTable();
+                document.getElementById('tanggal').value = '';
+                document.getElementById('pelanggan').value = '';
+                document.getElementById('produk').value = '';
+                document.getElementById('jumlah').value = '';
+                document.getElementById('total').value = '';
+            } else {
+                alert("Mohon lengkapi semua data!");
+            }
+        }
+
+        function hapusData(index) {
+            if (confirm("Yakin ingin menghapus data ini?")) {
+                dataLaporan.splice(index, 1);
+                renderTable();
+            }
+        }
+
+        function editData(index) {
+            const item = dataLaporan[index];
+            document.getElementById('tanggal').value = item.tanggal;
+            document.getElementById('pelanggan').value = item.pelanggan;
+            document.getElementById('produk').value = item.produk;
+            document.getElementById('jumlah').value = item.jumlah;
+            document.getElementById('total').value = item.total;
+            hapusData(index);
+        }
+
+        renderTable();
+    </script>
+
+</body>
+
+</html>
